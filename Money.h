@@ -1,7 +1,6 @@
-
-
 #ifndef MONEY_H
 #define MONEY_H
+
 #include <iostream>
 #include <ostream>
 

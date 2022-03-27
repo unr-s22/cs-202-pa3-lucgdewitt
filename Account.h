@@ -1,9 +1,8 @@
-//#include "Money.h"
 
-   
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
-#include "money.h"
+
+#include "Money.h"
 #include <vector>
 
 class Account: public Money{
@@ -26,6 +25,9 @@ public:
     void makeDeposit(Money d);
 
     void makeWithdrawals(Money w);
+
+    //overloading
+    friend std::ostream &operator << (std::ostream &out, Account &a);
 
 };
 
