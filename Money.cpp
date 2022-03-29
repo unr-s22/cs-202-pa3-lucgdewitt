@@ -13,6 +13,10 @@
         Money cash;
         cash.dollars = this->dollars + M.dollars;
         cash.cents = this->cents + M.cents;
+        while(cash.cents > 99){
+            cash.cents = cash.cents - 100;
+            cash.dollars = cash.dollars + 1;
+        }
 
         return cash;
     }
@@ -21,6 +25,10 @@
         Money cash;
         cash.dollars = this->dollars - M.dollars;
         cash.cents = this->cents - M.cents;
+        while(cash.cents > 99){
+            cash.cents = cash.cents - 100;
+            cash.dollars = cash.dollars + 1;
+        }
 
         return cash;
     }
@@ -107,29 +115,43 @@
 
     }
 
-    Money Money::operator != (const Money& M){
+    bool Money::operator != (const Money& M){
 Money cash;
         if(cash.dollars == M.dollars){ //Determine if cash is == to M
             if(cash.cents == M.cents){  //If it is then determine if cash has the same cents as M
-                return cash;        //if cash has == cents than M it returns???
+                return 0;        //if cash has == cents than M it returns???
             }
             else{           //If cash has != cents to M returns??
                 //cash = M;
-                return cash;
+                return 1;
             }
 
-            
-            return cash;
         }
         else{               //If cash has != dollars than M it automatically returns??
             //cash = M;       
-            return cash;
+            return 1;
 
         }
 
     }
 
-    Money Money::operator == (const Money& M){  //Working on understanding the logic
+    bool Money::operator == (const Money& M){  //Working on understanding the logic
+        Money cash;
+        if(cash.dollars == M.dollars){ //Determine if cash is == to M
+            if(cash.cents == M.cents){  //If it is, then determine if cash has the same cents as M
+                return 1;        //if cash has == cents than M it returns 1
+            }
+            else{           //If cash has != cents to M returns 0
+                //cash = M;
+                return 0;
+            }
+
+        }
+        else{               //If cash has != dollars than M it automatically returns 0
+            //cash = M;       
+            return 0;
+
+        }
 
     }
 
