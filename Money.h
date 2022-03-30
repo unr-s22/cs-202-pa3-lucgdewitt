@@ -37,9 +37,11 @@ public:
 
     virtual Money operator >= (const Money& other);
 
-    virtual Money operator != (const Money& other);
+    virtual bool operator != (const Money& other);
 
-    virtual Money operator == (const Money& other);
+    virtual bool operator == (const Money& other);
+
+    
 
 
 };
