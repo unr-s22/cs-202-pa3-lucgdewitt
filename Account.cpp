@@ -36,7 +36,7 @@ std::ostream & operator << (std::ostream &out, Account &a){
         }
         //checks if acc has withdrawals
         if(!a.withdrawals.empty()){
-            //loops through withdrawals vector and subtrancs from balance
+            //loops through withdrawals vector and subtracs from balance
             for (int i = 0; i < a.withdrawals.size(); i++){
                 a.balance = a.balance - a.withdrawals[i];
                 numOfWithdrawals++;
