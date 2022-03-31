@@ -24,5 +24,56 @@ int main(){
 
     std::cout << NewAccount << std::endl;
 
+    Money obj1(20,10);
+    Money obj2(10,5);
+
+//overloading testing >
+if(obj1 > obj2){
+    std::cout << "obj1 is bigger" << std::endl;
+}
+else{
+    std::cout << "obj2 is bigger" <<std::endl;
+}
+
+//overloading testing <
+if(obj1 < obj2){
+    std::cout << "obj1 is smaller" << std::endl;
+}
+else{
+    std::cout << "obj2 is smaller" << std::endl;
+}
+
+//overloading testing >=
+if(obj1 >= obj2){
+    std::cout << "obj1 is greater than or equal to obj2" << std::endl;
+}
+else{
+    std::cout << "obj1 is less than obj2" << std::endl;
+}
+
+//overloading testing <=
+if(obj1 <= obj2){
+    std::cout << "obj1 is less than or equal to obj2" <<std::endl;
+}
+else{
+    std::cout << "obj1 is greater than obj2" <<std::endl;
+}
+
+//overloading testing =
+if(obj1 == obj2){
+    std::cout << "obj1 is equal to obj2" <<std::endl;
+}
+else{
+    std::cout << "obj1 is not equal to obj2" <<std::endl;
+}
+
+//overloading testing !=
+if(obj1 != obj2){
+    std::cout << "obj1 is not equal to obj2" <<std::endl;
+}
+else{
+    std::cout << "obj1 is equal to obj2" <<std::endl;
+}
+
     return 0;
 }

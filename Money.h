@@ -1,5 +1,5 @@
-#ifndef MONEY_H
-#define MONEY_H
+//#ifndef MONEY_H
+//#define MONEY_H
 
 #include <iostream>
 #include <ostream>
@@ -29,13 +29,13 @@ public:
     virtual Money operator - (const Money& other);
 
     //overloading relational operators <,>,<=,>=,!=,==
-    virtual Money operator < (const Money& other);
+    virtual bool operator < (const Money& other);
 
-    virtual Money operator > (const Money& other);
+    virtual bool operator > (const Money& other);
 
-    virtual Money operator <= (const Money& other);
+    virtual bool operator <= (const Money& other);
 
-    virtual Money operator >= (const Money& other);
+    virtual bool operator >= (const Money& other);
 
     virtual bool operator != (const Money& other);
 
@@ -46,7 +46,7 @@ public:
 
 };
 
-#endif //endig MONEY_H
+//#endif //endig MONEY_H
 
 
 

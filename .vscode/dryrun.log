@@ -1,0 +1,9 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/lucs-laptop/cs202/assignments/cs-202-pa3-lucgdewitt'
+g++ -c main.cpp
+g++ -c Money.cpp
+g++ -c Account.cpp
+g++ -o pa3 main.o Money.o Account.o
+ 
+make: Leaving directory `/Users/lucs-laptop/cs202/assignments/cs-202-pa3-lucgdewitt'
+ 
